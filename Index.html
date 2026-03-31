@@ -4,241 +4,224 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sainath Services | Premium Tailoring & Real Estate in Bhandup West</title>
+<title>Sainath Services | Crafted Experience</title>
 
-<meta name="description" content="Sainath Mens Tailors & Real Estate Agency in Bhandup West. 30+ years tailoring expertise & trusted property deals. Call or WhatsApp now.">
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-:root {
-  --gold:#d4af37;
-  --dark:#0b0f1a;
-  --card:#111827;
-  --text:#e5e7eb;
-  --muted:#9ca3af;
+:root{
+  --gold:#c6a85b;
+  --bg:#0a0d14;
+  --soft:#121722;
+  --text:#e8e8e8;
+  --muted:#8b93a1;
 }
 
-* { margin:0; padding:0; box-sizing:border-box; }
+*{margin:0;padding:0;box-sizing:border-box;}
 
-body {
-  font-family:'Inter',sans-serif;
-  background:var(--dark);
+body{
+  background:var(--bg);
   color:var(--text);
-  line-height:1.6;
-}
-
-.container {
-  max-width:1100px;
-  margin:auto;
-  padding:60px 20px;
+  font-family:'Inter',sans-serif;
 }
 
 /* HERO */
-.hero {
-  text-align:center;
-  padding:100px 20px 60px;
-}
-
-.brand {
-  font-family:'Playfair Display',serif;
-  font-size:48px;
-}
-
-.gold { color:var(--gold); }
-
-.tagline {
-  margin-top:10px;
-  color:var(--muted);
-  font-size:18px;
-}
-
-/* STATS */
-.stats {
+.hero{
+  height:100vh;
   display:flex;
+  flex-direction:column;
   justify-content:center;
-  gap:40px;
-  margin-top:30px;
+  align-items:center;
+  text-align:center;
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeUp 1s ease forwards;
 }
 
-.stat h3 {
-  color:var(--gold);
-  font-size:28px;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:56px;
 }
 
-/* GRID */
-.grid {
+.hero p{
+  margin-top:15px;
+  color:var(--muted);
+}
+
+.gold{color:var(--gold);}
+
+/* subtle glow animation */
+.glow{
+  position:absolute;
+  width:300px;
+  height:300px;
+  background:radial-gradient(circle, rgba(198,168,91,0.2), transparent);
+  top:20%;
+  filter:blur(60px);
+  animation:glowPulse 6s infinite ease-in-out;
+}
+
+/* split */
+.split{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:30px;
 }
 
-/* CARD */
-.card {
-  background:rgba(255,255,255,0.03);
-  border:1px solid rgba(255,255,255,0.08);
-  border-radius:18px;
-  padding:30px;
-  transition:0.3s;
+.panel{
+  padding:60px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
 }
 
-.card:hover {
-  transform:translateY(-6px);
-  border-color:var(--gold);
+.panel.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-h2 {
-  font-size:22px;
+.panel h2{
+  font-family:'Playfair Display',serif;
   margin-bottom:10px;
 }
 
-.service-tag {
+.tag{
   color:var(--gold);
-  margin-bottom:15px;
-  font-weight:600;
+  margin-bottom:20px;
 }
 
-ul {
+ul{
   color:var(--muted);
-  padding-left:18px;
+  margin-bottom:25px;
 }
 
-.btn {
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 20px;
-  border-radius:8px;
-  background:var(--gold);
-  color:black;
-  font-weight:600;
+/* button */
+.btn{
+  border:1px solid var(--gold);
+  padding:10px 18px;
   text-decoration:none;
+  color:var(--gold);
+  border-radius:6px;
+  transition:0.3s;
 }
 
-/* SECTION TITLE */
-.section-title {
+.btn:hover{
+  background:var(--gold);
+  color:#000;
+  transform:translateY(-2px);
+}
+
+/* contact */
+.contact{
+  padding:80px 20px;
   text-align:center;
-  font-size:28px;
-  margin-bottom:40px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s ease;
 }
 
-/* CONTACT */
-.contact {
-  text-align:center;
-  background:var(--card);
-  border-radius:18px;
-  padding:40px;
+.contact.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-/* FOOTER */
-.footer {
-  text-align:center;
-  padding:30px;
-  color:var(--muted);
+/* animations */
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
 }
 
-/* WHATSAPP */
-.whatsapp {
+@keyframes glowPulse{
+  0%,100%{opacity:0.3;}
+  50%{opacity:0.6;}
+}
+
+/* whatsapp */
+.whatsapp{
   position:fixed;
   bottom:20px;
   right:20px;
   background:#25D366;
-  padding:16px;
+  padding:15px;
   border-radius:50%;
   color:white;
-  font-size:20px;
   text-decoration:none;
 }
 
-/* MOBILE */
-@media(max-width:800px){
-  .grid { grid-template-columns:1fr; }
-  .stats { flex-direction:column; gap:10px; }
+/* mobile */
+@media(max-width:900px){
+  .split{grid-template-columns:1fr;}
+  .hero h1{font-size:40px;}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="brand"><span class="gold">Sainath</span> Services</div>
-  <div class="tagline">Where Craft Meets Commitment</div>
+<div class="hero">
+  <div class="glow"></div>
 
-  <div class="stats">
-    <div class="stat">
-      <h3>30+</h3>
-      <p>Years Tailoring</p>
-    </div>
-    <div class="stat">
-      <h3>10+</h3>
-      <p>Years Real Estate</p>
-    </div>
+  <h1><span class="gold">Sainath</span> Services</h1>
+  <p>Crafted Precision • Trusted Deals • Bhandup West</p>
+</div>
+
+<div class="split">
+
+  <div class="panel">
+    <h2>🧵 Mens Tailoring</h2>
+    <div class="tag">Where Every Stitch Defines You</div>
+    <ul>
+      <li>Custom Shirts & Trousers</li>
+      <li>Safari Suits</li>
+      <li>Alterations</li>
+    </ul>
+    <a href="https://wa.me/917738438429" class="btn">Book Appointment</a>
   </div>
-</section>
 
-<!-- SERVICES -->
-<div class="container">
-
-  <div class="section-title">Our Businesses</div>
-
-  <div class="grid">
-
-    <!-- TAILOR -->
-    <div class="card">
-      <h2>🧵 Sainath Mens Tailors</h2>
-      <div class="service-tag">Precision Stitching. Perfect Impression.</div>
-
-      <ul>
-        <li>Custom Shirts & Trousers</li>
-        <li>Safari Suits</li>
-        <li>Alterations & Repairs</li>
-      </ul>
-
-      <a href="https://wa.me/917738438429" class="btn">Book Appointment</a>
-    </div>
-
-    <!-- REAL ESTATE -->
-    <div class="card">
-      <h2>🏠 Sainath Real Estate Agency</h2>
-      <div class="service-tag">Local Expertise. Trusted Deals.</div>
-
-      <ul>
-        <li>Buy & Sell Properties</li>
-        <li>Rental & Leasing</li>
-        <li>Bhandup Specialist</li>
-      </ul>
-
-      <a href="https://wa.me/917738438429" class="btn">Get Deals</a>
-    </div>
-
+  <div class="panel">
+    <h2>🏠 Real Estate</h2>
+    <div class="tag">Your Property Journey, Refined</div>
+    <ul>
+      <li>Buy / Sell</li>
+      <li>Rental & Leasing</li>
+      <li>Bhandup Specialist</li>
+    </ul>
+    <a href="https://wa.me/917738438429" class="btn">Explore Deals</a>
   </div>
 
 </div>
 
-<!-- CONTACT -->
-<div class="container">
-  <div class="section-title">Contact</div>
+<div class="contact">
+  <h3>Visit Us</h3>
+  <p><strong>Dayanand Poojari</strong></p>
+  <p>7738438429</p>
 
-  <div class="contact">
-    <p><strong>Dayanand Poojari (Sainath)</strong></p>
-    <p>📞 7738438429</p>
-    <p>🕒 Mon–Sunday (Thursday Closed) • 10am–9pm</p>
-    <p>📍 Shivaji Nagar, Tembipada Road, Bhandup West, Mumbai</p>
+  <a href="https://maps.app.goo.gl/b1VtwUPArma872Ge8" style="color:#c6a85b;">
+    Open in Google Maps →
+  </a>
 
-    <iframe 
-      src="https://maps.google.com/maps?q=Bhandup%20West&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      width="100%" height="220" style="border:0; margin-top:20px;">
-    </iframe>
-  </div>
+  <iframe src="https://maps.google.com/maps?q=Shivaji%20Nagar%20Tembipada%20Road%20Bhandup%20West&t=&z=15&ie=UTF8&iwloc=&output=embed"
+  width="100%" height="220" style="border:0;margin-top:20px;"></iframe>
 </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 Sainath Services • Built for Local Dominance
-</div>
-
-<!-- WHATSAPP -->
 <a href="https://wa.me/917738438429" class="whatsapp">💬</a>
+
+<script>
+// reveal on scroll
+const elements = document.querySelectorAll('.panel, .contact');
+
+window.addEventListener('scroll', () => {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < trigger){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
 
 </body>
 </html>
