@@ -7,7 +7,7 @@
 <title>Sainath Services | Tailor & Real Estate in Bhandup West</title>
 <meta name="description" content="Sainath Mens Tailors & Real Estate Agency in Bhandup West. 30+ years tailoring expertise and trusted property deals.">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -17,12 +17,9 @@
   --text:#e5e7eb;
   --muted:#9ca3af;
   --accent:#c6a85b;
-
-  --radius:12px;
-  --space:24px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0;}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
   font-family:'Inter',sans-serif;
@@ -32,26 +29,35 @@ body{
 }
 
 .container{
-  max-width:960px;
+  max-width:1000px;
   margin:auto;
   padding:0 20px;
 }
 
-/* HEADER */
-header{
-  padding:60px 0 40px;
+/* HERO */
+.hero{
   text-align:center;
+  padding:80px 20px 40px;
 }
 
-h1{
-  font-size:32px;
-  font-weight:600;
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
 }
 
 .subtitle{
-  margin-top:8px;
+  margin-top:10px;
   color:var(--muted);
   font-size:14px;
+}
+
+/* STORY */
+.story{
+  text-align:center;
+  max-width:700px;
+  margin:20px auto 40px;
+  color:var(--muted);
+  font-size:15px;
 }
 
 /* SECTION */
@@ -60,24 +66,24 @@ section{
 }
 
 .section-title{
-  font-size:18px;
-  margin-bottom:20px;
+  font-size:16px;
   color:var(--muted);
+  margin-bottom:20px;
 }
 
 /* GRID */
 .grid{
   display:grid;
-  gap:20px;
   grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
 /* CARD */
 .card{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:var(--space);
+  border-radius:12px;
+  padding:24px;
   transition:0.2s ease;
 }
 
@@ -87,10 +93,10 @@ section{
 
 .card h2{
   font-size:16px;
-  margin-bottom:6px;
+  margin-bottom:8px;
 }
 
-.card .tag{
+.tag{
   color:var(--accent);
   font-size:13px;
   margin-bottom:12px;
@@ -107,37 +113,43 @@ ul{
   display:inline-block;
   margin-top:14px;
   padding:10px 14px;
-  font-size:13px;
-  border:1px solid var(--border);
   border-radius:8px;
-  text-decoration:none;
-  color:var(--text);
-}
-
-.btn.primary{
-  border-color:var(--accent);
+  border:1px solid var(--accent);
   color:var(--accent);
+  text-decoration:none;
+  font-size:13px;
+  transition:0.3s;
 }
 
-.btn.primary:hover{
+.btn:hover{
   background:var(--accent);
   color:#000;
+}
+
+/* OWNER */
+.owner{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:24px;
+  text-align:center;
+  max-width:600px;
+  margin:40px auto;
 }
 
 /* CONTACT */
 .contact{
   background:var(--surface);
   border:1px solid var(--border);
-  border-radius:var(--radius);
-  padding:var(--space);
+  border-radius:12px;
+  padding:24px;
 }
 
 .contact p{
-  font-size:14px;
   color:var(--muted);
+  font-size:14px;
 }
 
-/* MAP */
 .map{
   margin-top:16px;
   border-radius:8px;
@@ -148,8 +160,8 @@ ul{
 footer{
   text-align:center;
   padding:30px 0;
-  font-size:12px;
   color:var(--muted);
+  font-size:12px;
 }
 
 /* WHATSAPP */
@@ -160,7 +172,7 @@ footer{
   background:#25D366;
   padding:12px;
   border-radius:50%;
-  color:#fff;
+  color:white;
   text-decoration:none;
 }
 
@@ -173,21 +185,29 @@ footer{
 
 <body>
 
-<header class="container">
+<!-- HERO -->
+<div class="hero">
   <h1>Sainath Services</h1>
-  <div class="subtitle">Tailoring • Real Estate • Bhandup West</div>
-</header>
+  <div class="subtitle">Craftsmanship • Trust • Bhandup West</div>
+</div>
 
-<main class="container">
+<!-- STORY -->
+<div class="story">
+  For over <strong style="color:#c6a85b;">30 years</strong>, Sainath Mens Tailors has been part of everyday life in Bhandup — stitching garments with precision and care.  
+  Alongside, Sainath Real Estate Agency has helped families find the right homes and reliable tenants with honest guidance.
+</div>
 
+<div class="container">
+
+<!-- SERVICES -->
 <section>
   <div class="section-title">Services</div>
 
   <div class="grid">
 
-    <article class="card">
-      <h2>Sainath Mens Tailors</h2>
-      <div class="tag">30+ Years Experience</div>
+    <div class="card">
+      <h2>🧵 Sainath Mens Tailors</h2>
+      <div class="tag">Crafted for Fit. Built for Confidence.</div>
 
       <ul>
         <li>Custom Shirts & Trousers</li>
@@ -195,12 +215,12 @@ footer{
         <li>Alterations & Repairs</li>
       </ul>
 
-      <a href="https://wa.me/917738438429" class="btn primary">Book Appointment</a>
-    </article>
+      <a href="https://wa.me/917738438429" class="btn">Book Appointment</a>
+    </div>
 
-    <article class="card">
-      <h2>Sainath Real Estate Agency</h2>
-      <div class="tag">10+ Years Experience</div>
+    <div class="card">
+      <h2>🏠 Sainath Real Estate Agency</h2>
+      <div class="tag">Local Knowledge. Straightforward Deals.</div>
 
       <ul>
         <li>Buy / Sell Properties</li>
@@ -208,20 +228,29 @@ footer{
         <li>Bhandup Specialist</li>
       </ul>
 
-      <a href="https://wa.me/917738438429" class="btn primary">Get Deals</a>
-    </article>
+      <a href="https://wa.me/917738438429" class="btn">Get Deals</a>
+    </div>
 
   </div>
 </section>
 
+<!-- OWNER -->
+<div class="owner">
+  <p style="font-size:13px;color:#9ca3af;">Meet the Owner</p>
+  <h3 style="margin:8px 0;">Dayanand Poojari (Sainath)</h3>
+  <p style="color:#9ca3af;font-size:14px;">
+    Known locally for reliability and personal attention, every client interaction is handled with care — whether stitching a garment or closing a property deal.
+  </p>
+</div>
+
+<!-- CONTACT -->
 <section>
   <div class="section-title">Contact</div>
 
   <div class="contact">
-    <p><strong>Dayanand Poojari (Sainath)</strong></p>
-    <p>7738438429</p>
-    <p>Mon–Sunday (Thursday Closed) • 10am–9pm</p>
-    <p>Shivaji Nagar, Tembipada Road, Bhandup West, Mumbai</p>
+    <p><strong>📞 7738438429</strong></p>
+    <p>🕒 Mon–Sunday (Thursday Closed) • 10am–9pm</p>
+    <p>📍 Shivaji Nagar, Tembipada Road, Bhandup West, Mumbai</p>
 
     <p style="margin-top:10px;">
       <a href="https://maps.app.goo.gl/b1VtwUPArma872Ge8" style="color:#c6a85b;text-decoration:none;">
@@ -233,10 +262,14 @@ footer{
       <iframe src="https://maps.google.com/maps?q=Shivaji%20Nagar%20Tembipada%20Road%20Bhandup%20West&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%" height="200" style="border:0;"></iframe>
     </div>
+
+    <p style="margin-top:10px;font-size:12px;">
+      Serving Bhandup West, Nahur, Kanjurmarg & nearby areas
+    </p>
   </div>
 </section>
 
-</main>
+</div>
 
 <footer>
   © 2026 Sainath Services
