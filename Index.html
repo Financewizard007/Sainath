@@ -4,100 +4,139 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sainath Services | Bhandup West</title>
+<title>Sainath Services | Premium Tailoring & Real Estate in Bhandup West</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta name="description" content="Sainath Mens Tailors & Real Estate Agency in Bhandup West. 30+ years tailoring expertise & trusted property deals. Call or WhatsApp now.">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --gold:#d4af37;
+  --dark:#0b0f1a;
+  --card:#111827;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
 body {
-  margin:0;
-  font-family:'Poppins', sans-serif;
-  background: linear-gradient(135deg,#0a0f1c,#111827);
-  color:#fff;
-}
-
-header {
-  padding:80px 20px 40px;
-  text-align:center;
-}
-
-h1 {
-  font-size:42px;
-  margin-bottom:10px;
-}
-
-.gold { color:#d4af37; }
-
-.subtitle {
-  color:#aaa;
-  font-size:18px;
+  font-family:'Inter',sans-serif;
+  background:var(--dark);
+  color:var(--text);
+  line-height:1.6;
 }
 
 .container {
   max-width:1100px;
   margin:auto;
-  padding:40px 20px;
+  padding:60px 20px;
 }
 
+/* HERO */
+.hero {
+  text-align:center;
+  padding:100px 20px 60px;
+}
+
+.brand {
+  font-family:'Playfair Display',serif;
+  font-size:48px;
+}
+
+.gold { color:var(--gold); }
+
+.tagline {
+  margin-top:10px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+/* STATS */
+.stats {
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:30px;
+}
+
+.stat h3 {
+  color:var(--gold);
+  font-size:28px;
+}
+
+/* GRID */
 .grid {
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:30px;
 }
 
+/* CARD */
 .card {
-  background:rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
-  border-radius:16px;
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:18px;
   padding:30px;
-  border:1px solid rgba(255,255,255,0.1);
   transition:0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform:translateY(-6px);
+  border-color:var(--gold);
 }
 
 h2 {
-  margin-top:0;
   font-size:22px;
+  margin-bottom:10px;
+}
+
+.service-tag {
+  color:var(--gold);
+  margin-bottom:15px;
+  font-weight:600;
 }
 
 ul {
+  color:var(--muted);
   padding-left:18px;
-  color:#ccc;
 }
 
 .btn {
   display:inline-block;
-  margin-top:15px;
+  margin-top:20px;
   padding:12px 20px;
-  background:#d4af37;
-  color:#000;
   border-radius:8px;
-  text-decoration:none;
+  background:var(--gold);
+  color:black;
   font-weight:600;
+  text-decoration:none;
 }
 
+/* SECTION TITLE */
 .section-title {
   text-align:center;
-  margin-bottom:30px;
   font-size:28px;
+  margin-bottom:40px;
 }
 
+/* CONTACT */
 .contact {
   text-align:center;
-  background:#111827;
-  border-radius:16px;
-  padding:30px;
+  background:var(--card);
+  border-radius:18px;
+  padding:40px;
 }
 
+/* FOOTER */
 .footer {
   text-align:center;
-  padding:20px;
-  color:#777;
+  padding:30px;
+  color:var(--muted);
 }
 
+/* WHATSAPP */
 .whatsapp {
   position:fixed;
   bottom:20px;
@@ -110,71 +149,95 @@ ul {
   text-decoration:none;
 }
 
+/* MOBILE */
 @media(max-width:800px){
   .grid { grid-template-columns:1fr; }
+  .stats { flex-direction:column; gap:10px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1><span class="gold">Sainath</span> Services</h1>
-  <p class="subtitle">30 Years of Craftsmanship • 10 Years of Property Trust</p>
-</header>
+<!-- HERO -->
+<section class="hero">
+  <div class="brand"><span class="gold">Sainath</span> Services</div>
+  <div class="tagline">Where Craft Meets Commitment</div>
 
+  <div class="stats">
+    <div class="stat">
+      <h3>30+</h3>
+      <p>Years Tailoring</p>
+    </div>
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Years Real Estate</p>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
 <div class="container">
 
   <div class="section-title">Our Businesses</div>
 
   <div class="grid">
 
+    <!-- TAILOR -->
     <div class="card">
       <h2>🧵 Sainath Mens Tailors</h2>
-      <p class="gold">Precision Stitching. Perfect Impression.</p>
+      <div class="service-tag">Precision Stitching. Perfect Impression.</div>
+
       <ul>
-        <li>Custom Shirts</li>
-        <li>Trousers & Safari Suits</li>
+        <li>Custom Shirts & Trousers</li>
+        <li>Safari Suits</li>
         <li>Alterations & Repairs</li>
       </ul>
+
       <a href="https://wa.me/917738438429" class="btn">Book Appointment</a>
     </div>
 
+    <!-- REAL ESTATE -->
     <div class="card">
-      <h2>🏠 Sainath Real Estate</h2>
-      <p class="gold">Local Expertise. Trusted Deals.</p>
+      <h2>🏠 Sainath Real Estate Agency</h2>
+      <div class="service-tag">Local Expertise. Trusted Deals.</div>
+
       <ul>
-        <li>Buy / Sell Properties</li>
+        <li>Buy & Sell Properties</li>
         <li>Rental & Leasing</li>
-        <li>Bhandup Local Specialist</li>
+        <li>Bhandup Specialist</li>
       </ul>
-      <a href="https://wa.me/917738438429" class="btn">Get Property Deals</a>
+
+      <a href="https://wa.me/917738438429" class="btn">Get Deals</a>
     </div>
 
   </div>
 
 </div>
 
+<!-- CONTACT -->
 <div class="container">
   <div class="section-title">Contact</div>
 
   <div class="contact">
-    <p><b>Dayanand Poojari (Sainath)</b></p>
+    <p><strong>Dayanand Poojari (Sainath)</strong></p>
     <p>📞 7738438429</p>
     <p>🕒 Mon–Sunday (Thursday Closed) • 10am–9pm</p>
-    <p>📍 Shivaji Nagar, Tembipada Road, Bhandup West</p>
+    <p>📍 Shivaji Nagar, Tembipada Road, Bhandup West, Mumbai</p>
 
     <iframe 
       src="https://maps.google.com/maps?q=Bhandup%20West&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      width="100%" height="200" style="border:0; margin-top:15px;">
+      width="100%" height="220" style="border:0; margin-top:20px;">
     </iframe>
   </div>
 </div>
 
+<!-- FOOTER -->
 <div class="footer">
-  © 2026 Sainath Services
+  © 2026 Sainath Services • Built for Local Dominance
 </div>
 
+<!-- WHATSAPP -->
 <a href="https://wa.me/917738438429" class="whatsapp">💬</a>
 
 </body>
